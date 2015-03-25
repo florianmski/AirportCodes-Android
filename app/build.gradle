@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.17.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.florianmski.airportcodes"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+//    https://code.google.com/p/android/issues/detail?id=52962#c35
+
+//    compile project(':spongeframework')
+    compile 'com.github.florianmski:SpongeFramework:dfb9d5e'
+
+    compile 'au.com.gridstone:grex:2.0.0'
+    compile 'au.com.gridstone:grex-gson-converter:2.0.0'
+    compile 'it.dex.dexmovingimageview:dexmovingimageviewlib:0.1.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.2.2@aar') {
+        transitive = true;
+    }
+}

@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@android:id/list"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <it.dex.movingimageviewlib.DexMovingImageView
+        xmlns:dex="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        dex:evaluator="timeBased"
+        dex:generator="zoomed"
+        dex:minZoom="1"
+        dex:zoom="1"
+        dex:maxZoom="2"
+        dex:loop="true"
+        dex:drawer="scale|translate" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="15dp"
+                  android:layout_margin="15dp"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:background="@drawable/rectangle">
+
+        <TextView
+            android:id="@+id/textViewCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            tools:text="cdg"/>
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            tools:text="aéroport de Paris-Charles-de-Gaulle"/>
+
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            tools:text="paris - france"/>
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            tools:text="Renamed and officially opened in 1974, France's largest airport is named after Charles De Gaulle, former President and founder of the French Fifth Republic."/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewImageCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@color/black_transparent"
+        tools:text="photo by somebody I use to knooooow"/>
+
+</FrameLayout>

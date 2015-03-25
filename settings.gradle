@@ -1,0 +1,3 @@
+include ':app'
+include ':spongeframework'
+project(':spongeframework').projectDir=new File('../../Libraries/SpongeFramework/library')

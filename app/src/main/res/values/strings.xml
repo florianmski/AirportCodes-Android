@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Airport Codes</string>
+    <string name="credits">
+        <p>
+            Thanks to <a href="https://twitter.com/lynnandtonic">Lynn Fisher</a> and <a href="https://twitter.com/nickcrohn">Nick Crohn</a> for making the data from <a href="http://airportcod.es">airportcod.es</a> available.\n
+            <a href="http://airportcod.es/#contribute">Contributions</a> are welcome.
+        </p>
+    </string>
+    <string name="sources">All photographs are from Flickr &amp; Wikipedia, under Creative Commons licenses.</string>
+</resources>

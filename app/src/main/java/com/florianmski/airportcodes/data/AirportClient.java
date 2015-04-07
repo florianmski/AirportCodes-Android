@@ -93,7 +93,7 @@ public enum AirportClient
                     {
                         return getRawAirport(code).onErrorResumeNext(AirportClient.<Airport>on304ReturnNullFunc());
                     }
-                })
+                }, 10)
                 .filter(new Func1<Airport, Boolean>()
                 {
                     @Override

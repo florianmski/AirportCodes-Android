@@ -77,7 +77,7 @@ public class AirportService extends IntentService
                     @Override
                     public void onError(Throwable e)
                     {
-                        Timber.d(e, "Error during sync");
+                        Timber.i(e, "Error during sync");
                     }
 
                     @Override

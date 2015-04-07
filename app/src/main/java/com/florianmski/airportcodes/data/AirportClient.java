@@ -195,7 +195,8 @@ public enum AirportClient
             {
                 if(throwable instanceof RetrofitError)
                 {
-                    if(((RetrofitError)throwable).getResponse().getStatus() == 304)
+                    RetrofitError e = (RetrofitError) throwable;
+                    if(e.getResponse() != null && e.getResponse().getStatus() == 304)
                         return Observable.just(null);
                 }
 
